@@ -90,7 +90,7 @@ export const initializePassport = () => {
         {
             clientID: config.github.clientId ,
             clientSecret: config.github.clientSecret,
-            callbackURL: `${config.github.callbackUrl}`  
+            callbackURL: config.github.callbackUrl 
         },
         async (accessToken, refreshToken, profile, done) => {
             try {
