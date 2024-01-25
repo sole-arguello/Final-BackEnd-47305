@@ -90,7 +90,7 @@ export const initializePassport = () => {
         {
             clientID: config.github.clientId ,
             clientSecret: config.github.clientSecret,
-            callbackURL: config.github.callbackUrl 
+            callbackURL: config.github.callbackUrl
         },
         async (accessToken, refreshToken, profile, done) => {
             try {
@@ -104,7 +104,7 @@ export const initializePassport = () => {
                     first_name: profile._json.name,
                     last_name: profile.username,
                     age: 0,
-                    email: profile._json.email,
+                    email: profile._json.email || `${profile_json.name}@github.com`,
                     password: createHash(profile.id),
                     role: 'user'
                 }
