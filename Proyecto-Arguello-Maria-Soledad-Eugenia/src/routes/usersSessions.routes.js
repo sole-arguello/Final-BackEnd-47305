@@ -16,7 +16,7 @@ router.get('/fail-register', UsersSessionsController.renderRegisterFail)
 //ruta registro con github
 router.get('/register-github', registerGithubStrategy)
 //ruta collback con github
-router.get(config.github.callbackUrl, registerGithubStrategyFail, UsersSessionsController.renderRegisterGithub)
+router.get('/githubCallback', registerGithubStrategyFail, UsersSessionsController.renderRegisterGithub)
 /*---------------- estrategia login ------------*/
 
 //logueo al usuario se admin o usuario locales//localhost:8080/api/sessions/login
