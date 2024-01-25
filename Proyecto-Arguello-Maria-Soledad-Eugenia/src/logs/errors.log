@@ -536,3 +536,16 @@ error: userEmail is not defined
 [31merror[39m: error en manager getUserById
 [31merror[39m: error en manager getUserById
 [31merror[39m: Se produjo un error en uploaderUserDocuments controller
+[31merror[39m: error al iniciar sesion
+[31merror[39m: Error en manager createUsers
+[31merror[39m: No se pudo crear el usuario
+[31merror[39m: Error en manager createUsers
+[31merror[39m: No se pudo crear el usuario
+[31merror[39m: Error en manager createUsers
+[31merror[39m: Error en manager createUsers
+[31merror[39m: Error en manager createUsers
+[31merror[39m: Error en manager createUsers
+[31merror[39m: Error en manager createUsers
+[31merror[39m: Failed to lookup view "/profile" in views directory "C:\Users\54351\OneDrive\Desktop\back\Final-BackEnd-47305\Proyecto-Arguello-Maria-Soledad-Eugenia\src\views"
+[31merror[39m: Failed to lookup view "/profile" in views directory "C:\Users\54351\OneDrive\Desktop\back\Final-BackEnd-47305\Proyecto-Arguello-Maria-Soledad-Eugenia\src\views"
+[31merror[39m: error al iniciar sesion

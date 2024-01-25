@@ -93,10 +93,11 @@ export const initializePassport = () => {
             callbackURL: config.github.callbackUrl
         },
         async (accessToken, refreshToken, profile, done) => {
-            try {
+            //try {
                 //console.log("paso por Passport registerGithubStrategy");
-                //console.log('Perfil', profile)
-                const user = await usersSessionsService.getUserByEmail(profile.username)
+                console.log('Perfil', profile)
+                const user = await usersSessionsService.getUserByEmail(profile.email)
+                console.log('user git', user)
                 if(user){
                     return done(null, user)
                 }
@@ -112,9 +113,9 @@ export const initializePassport = () => {
                // console.log(newUser)
                 const userCreated = await usersSessionsService.createUsers(newUser)
                 return done(null, userCreated)
-            } catch (error) {
-                return done(error)
-            }
+            // } catch (error) {
+            //     return done(error)
+            // }
         }
     ))
 

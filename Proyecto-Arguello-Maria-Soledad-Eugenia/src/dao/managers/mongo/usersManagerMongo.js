@@ -6,7 +6,7 @@ export class UsersManagerMongo {
         this.model = usersModel
     }
     async createUsers(userInfo) {
-        try {
+       // try {
             // const newUserDto = new UsersDto(userInfo);
             // console.log('Usuario Dto', newUserDto);
             const newUser = await this.model.create(userInfo);
@@ -14,21 +14,21 @@ export class UsersManagerMongo {
             logger.info('paso por manager createUsers');          
             return newUser
 
-        } catch (error) {
-            logger.error('Error en manager createUsers', error.message);
-            throw new Error('No se pudo crear el usuario', error.message);
-        }
+        // } catch (error) {
+        //     logger.error('Error en manager createUsers', error.message);
+        //     throw new Error('No se pudo crear el usuario', error.message);
+        // }
         
     }
     async getUserByEmail(userEmail){
-        try {
+       // try {
             const user = await this.model.findOne({email: userEmail}).lean();
             logger.info('paso por manager getUserByEmail');
             return user
-        } catch (error) {
-            logger.error('Error en manager getUserByEmail', error.message);
-            throw new Error('El Usuario no se encuentra registrado', error.message);
-        }
+        // } catch (error) {
+        //     logger.error('Error en manager getUserByEmail', error.message);
+        //     throw new Error('El Usuario no se encuentra registrado', error.message);
+        // }
     }
     async getUserById(id){
         //console.log(id)
