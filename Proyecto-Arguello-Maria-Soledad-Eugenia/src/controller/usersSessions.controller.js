@@ -24,9 +24,9 @@ export class UsersSessionsController {
     static renderRegisterGithub = async (req, res) => {
         const user = req.user;
         const token = generateToken(user);
-        logger.info('Registro github correcto');
-        res.cookie('authLogin', token, {maxAge: 43200000, httpOnly: true});
-        return res.render('/profile',  {style: "profile.css"});
+        res.cookie('cookieLogin', token, {maxAge: 43200000, httpOnly: true});
+        logger.info('Registro github correcto ');
+        return res.redirect('/profile');
         
     }
     static renderLogin = async (req, res) => {
@@ -89,7 +89,7 @@ export class UsersSessionsController {
             logger.info('sesion cerrada');
             res.clearCookie('cookieLogin');
             //una vez cerrada la sesion lo redirige a login 
-            return res.render('/', {style: "home.css"});
+            return res.redirect('/');
            
         } catch (error) {
            // logger.error(error.message);

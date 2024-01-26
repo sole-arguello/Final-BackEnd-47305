@@ -73,7 +73,7 @@ export class ViewsController {
     static renderViewsRegister = async (req, res) => {
         try {
             //console.log(req.body);
-            //logger.info('renderizo register');
+            logger.info('renderizo register');
             res.render('register', { style: "register.css"});
         } catch (error) {
             logger.error(error.message);
