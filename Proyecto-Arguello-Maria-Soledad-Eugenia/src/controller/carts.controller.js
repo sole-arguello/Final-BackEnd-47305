@@ -58,7 +58,7 @@ export class CartsController {
             const cart = await cartsServiceartsService.getCartsId(idCarts);
             const user = req.user.role;
             const userPremium = req.user._id.toString();
-            const productOwner = product.owner.toString();
+            const productOwner = cart.owner.toString();
             if((productOwner === userPremium) && (user === "admin")) {
                 res.json({status: "error", message: "No puedes agregar un producto a un carrito" })
             }else{
