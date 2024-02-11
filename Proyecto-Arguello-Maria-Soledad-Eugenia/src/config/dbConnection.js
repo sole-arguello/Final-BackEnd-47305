@@ -8,10 +8,10 @@ export class connectDB {
 
     let URL;
 
-    if(config.enviroment.persistence === 'development'){
-        URL = config.mongo.url;
-    }else{
+    if(config.enviroment.persistence === 'test'){
         URL = config.mongo.url_test;
+    }else{
+        URL = config.mongo.url;
     }
 
     // const URL = config.mongo.url;

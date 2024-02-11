@@ -5,7 +5,7 @@ dotenv.config()
 const program = new Command();
 
 program
-    .option('--port <port>', 'Puerto de ejecucion', '8080')
+    .option('--port <port>', 'Puerto de ejecucion', '3000')
     .option('--mode <mode>', 'Entorno de desarrollo', 'development')
     .option('--mode <mode>', 'Entorno de prueba', 'test')
     .parse();

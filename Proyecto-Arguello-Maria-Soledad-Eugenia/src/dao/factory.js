@@ -78,43 +78,43 @@ switch (enviroment) {
     break;
   }
 
-  case "test": {
-    const { connectDB } = await import("../config/dbConnection.js");
-    connectDB.getInstance();
+  // case "test": {
+  //   const { connectDB } = await import("../config/dbConnection.js");
+  //   connectDB.getInstance();
 
-    //Products
-    const { ProductsManagerMongo } = await import(
-      "../dao/managers/mongo/productsManagerMongo.js"
-    );
-    productsDao = new ProductsManagerMongo();
+  //   //Products
+  //   const { ProductsManagerMongo } = await import(
+  //     "../dao/managers/mongo/productsManagerMongo.js"
+  //   );
+  //   productsDao = new ProductsManagerMongo();
 
-    //Carts
-    const { CartsManagerMongo } = await import(
-      "../dao/managers/mongo/cartsManagerMongo.js"
-    );
-    cartsDao = new CartsManagerMongo();
+  //   //Carts
+  //   const { CartsManagerMongo } = await import(
+  //     "../dao/managers/mongo/cartsManagerMongo.js"
+  //   );
+  //   cartsDao = new CartsManagerMongo();
 
-    //Chat
-    const { ChatManagerMongo } = await import(
-      "../dao/managers/mongo/chatManagerMongo.js"
-    );
-    chatDao = new ChatManagerMongo();
+  //   //Chat
+  //   const { ChatManagerMongo } = await import(
+  //     "../dao/managers/mongo/chatManagerMongo.js"
+  //   );
+  //   chatDao = new ChatManagerMongo();
 
-    //Users
-    const { UsersManagerMongo } = await import(
-      "../dao/managers/mongo/usersManagerMongo.js"
-    );
-    usersSessionsDao = new UsersManagerMongo();
+  //   //Users
+  //   const { UsersManagerMongo } = await import(
+  //     "../dao/managers/mongo/usersManagerMongo.js"
+  //   );
+  //   usersSessionsDao = new UsersManagerMongo();
 
-    //tikets
-    const { TicketManagerMongo } = await import(
-      "./managers/mongo/ticketManagerMongo.js"
-    );
-    ticketDao = new TicketManagerMongo();
+  //   //tikets
+  //   const { TicketManagerMongo } = await import(
+  //     "./managers/mongo/ticketManagerMongo.js"
+  //   );
+  //   ticketDao = new TicketManagerMongo();
 
-    logger.info("Estoy en el entorno de pruebas");
-    break;
-  }
+  //   logger.info("Estoy en el entorno de pruebas");
+  //   break;
+  // }
 }
 
 export { productsDao, cartsDao, chatDao, usersSessionsDao, ticketDao };

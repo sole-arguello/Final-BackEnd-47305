@@ -27,6 +27,7 @@ import { usersSessionsRouter } from "./routes/usersSessions.routes.js";
 import { usersRouter } from "./routes/users.routes.js";
 
 const port = config.server.port; //configuro puerto
+
 const app = express();
 
 //midleware
