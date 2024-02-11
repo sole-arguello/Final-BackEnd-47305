@@ -6,8 +6,9 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start-dev": "nodemon src/app.js --mode development --port 8080",
-    "start-test": "mocha test/supertest.test.js --mode test --port 8081"
+    "start-dev": "nodemon src/app.js --mode development --port 8082",
+    "start-test": "mocha test/supertest.test.js --mode test --port 3030",
+    "start-prod": "node src/app.js --mode production --port 8080"
   },
   "keywords": [],
   "author": "",

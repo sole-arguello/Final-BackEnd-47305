@@ -6,8 +6,9 @@ const program = new Command();
 
 program
     .option('--port <port>', 'Puerto de ejecucion', '3000')
-    .option('--mode <mode>', 'Entorno de prueba', 'test')
+    .option('--mode <mode>', 'Entorno de production', 'production')
     .option('--mode <mode>', 'Entorno de desarrollo', 'development')
+    .option('--mode <mode>', 'Entorno de test', 'test')
     .parse();
 
 const persistenceMode = program.opts().mode;

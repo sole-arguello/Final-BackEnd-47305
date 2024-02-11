@@ -12,7 +12,7 @@ let ticketDao;
 const enviroment = config.enviroment.persistence;
 
 switch (enviroment) {
-  case "development": {
+  case "production": {
     //Mongo DB
     const { connectDB } = await import("../config/dbConnection.js");
     connectDB.getInstance();
@@ -47,12 +47,12 @@ switch (enviroment) {
     );
     ticketDao = new TicketManagerMongo();
 
-    logger.info("Estoy en el entorno de produccion");
+    logger.info("Estoy en el entorno de producción");
     break;
   }
   //////////////////////////////////////////////////////////////////////////////////////////
 
-  case "production": {
+  case "development": {
     ///files system
 
     //Products
@@ -77,44 +77,6 @@ switch (enviroment) {
     logger.info("Estoy en el entorno de desarrollo");
     break;
   }
-
-  // case "test": {
-  //   const { connectDB } = await import("../config/dbConnection.js");
-  //   connectDB.getInstance();
-
-  //   //Products
-  //   const { ProductsManagerMongo } = await import(
-  //     "../dao/managers/mongo/productsManagerMongo.js"
-  //   );
-  //   productsDao = new ProductsManagerMongo();
-
-  //   //Carts
-  //   const { CartsManagerMongo } = await import(
-  //     "../dao/managers/mongo/cartsManagerMongo.js"
-  //   );
-  //   cartsDao = new CartsManagerMongo();
-
-  //   //Chat
-  //   const { ChatManagerMongo } = await import(
-  //     "../dao/managers/mongo/chatManagerMongo.js"
-  //   );
-  //   chatDao = new ChatManagerMongo();
-
-  //   //Users
-  //   const { UsersManagerMongo } = await import(
-  //     "../dao/managers/mongo/usersManagerMongo.js"
-  //   );
-  //   usersSessionsDao = new UsersManagerMongo();
-
-  //   //tikets
-  //   const { TicketManagerMongo } = await import(
-  //     "./managers/mongo/ticketManagerMongo.js"
-  //   );
-  //   ticketDao = new TicketManagerMongo();
-
-  //   logger.info("Estoy en el entorno de pruebas");
-  //   break;
-  // }
 }
 
 export { productsDao, cartsDao, chatDao, usersSessionsDao, ticketDao };
